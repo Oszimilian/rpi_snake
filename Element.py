@@ -1,6 +1,8 @@
 import Defines
 import curses
 
+from sense_hat import SenseHat
+
 class Element:
 
 
@@ -27,11 +29,15 @@ class Element:
     def get_pos(self):
         return self.position
     
-    def print_element(self, c):
+    def print_element(self, c, hat):
         x = self.position[Defines.x]
         y = self.position[Defines.y]
 
         #print(self.position)
-        print("\033["+str(y)+";"+str(x)+"H"+c)
+        #print("\033["+str(y)+";"+str(x)+"H"+c)
+        if c != ' ':
+            hat.set_pixel(x, y, self.rgb_val[0], self.rgb_val[1], self.rgb_val[2])
+        else:
+            hat.set_pixel(x, y, 0, 0, 0)
 
 

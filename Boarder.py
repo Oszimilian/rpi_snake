@@ -23,6 +23,6 @@ class Boarder:
             else:
                 return True
             
-    def print_boarder(self):
+    def print_boarder(self, sense):
         for i in self.boarder:
-            i.print_element('X')
+            i.print_element('X', sense)

@@ -53,6 +53,6 @@ class Snake:
 
         return self.is_move_valid()
     
-    def print_snake(self, c):
+    def print_snake(self, c, sense):
         for i in self.snake:
-            i.print_element(c)
+            i.print_element(c, sense)

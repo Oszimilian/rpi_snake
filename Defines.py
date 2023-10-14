@@ -6,5 +6,5 @@ left = 3
 x = 0
 y = 1
 
-geometry = [20, 20]
+geometry = [8, 8]
 default_rgb = [250, 250, 0]
