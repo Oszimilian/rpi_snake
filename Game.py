@@ -8,7 +8,7 @@ import time
 consol_output = [[0] * Defines.geometry[1] for _ in range(Defines.geometry[0])]
 
 snake1 = Snake.Snake([5,5], 5, Defines.right)
-#boarder = Boarder.Boarder([20, 20])
+boarder = Boarder.Boarder([20, 20])
 
 def clear_game():
     snake1.print_snake(" ")
@@ -16,14 +16,9 @@ def clear_game():
 
 def print_game():
     snake1.print_snake("X")
-    #boarder.print_boarder()
-    print(" ")
+    boarder.print_boarder()
     time.sleep(1)
 
-
-
-
-print("Snake")
 
 clear_game()
 snake1.move_snake(Defines.left)
